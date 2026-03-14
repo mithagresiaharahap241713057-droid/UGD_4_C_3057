@@ -147,7 +147,7 @@ export default function Home() {
             className={`px-5 py-2 rounded-full font-bold transition-all duration-200
             ${difficulty === "easy"
             ? "bg-yellow-400 text-black shadow-lg scale-105"
-            : "bg-white/20 backdrop-blur-sm text-white hover:scale-105"}
+            : "bg-white/20 backdrop-blur-sm text-white/50 text-white/50 hover:text-white hover:scale-110"}
             `}
           >
             Easy (4)
@@ -158,7 +158,7 @@ export default function Home() {
             className={`px-5 py-2 rounded-full font-bold transition-all duration-200
             ${difficulty === "medium"
             ? "bg-yellow-400 text-black shadow-lg scale-105"
-            : "bg-white/20 backdrop-blur-sm text-white hover:scale-105"}
+            : "bg-white/20 backdrop-blur-sm text-white/50 hover:text-white hover:scale-110"}
             `}
           >
             Medium (6)
