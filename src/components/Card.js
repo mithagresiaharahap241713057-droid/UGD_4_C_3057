@@ -19,21 +19,29 @@ function Card({ card, isFlipped, isMatched, onFlip }) {
   const isOpen = isFlipped || isMatched;
   const IconComponent = card.icon;
 
-  // Menentukan className berdasarkan status kartu
-  const cardClass = `w-20 h-20 flex items-center justify-center text-3xl rounded-xl cursor-pointer select-none transition-all duration-300 transform
-  ${isOpen ? 'bg-white shadow-md scale-100' : 'bg-gradient-to-br from-purple-500 to-indigo-600 shadow-lg hover:scale-105 hover:shadow-xl'}
-  ${isMatched ? 'opacity-70 ring-2 ring-green-400' : ''}`;
-
   return (
-    <div onClick={handleClick} className={cardClass}>
-      {/* Tampilkan icon jika kartu terbuka atau sudah cocok, tampilkan ? jika tertutup */}
-      {isOpen ? (
-        <span className="animate-bounce-once">
-          <IconComponent style={{ color: card.color }} />
-        </span>
-      ) : (
-        <FaQuestion className="text-white/60 text-xl" />
-      )}
+    <div
+      onClick={handleClick}
+      className="w-20 h-20 cursor-pointer perspective"
+    >
+      <div
+        className={`relative w-full h-full flex items-center justify-center text-3xl rounded-xl select-none
+        transition-all duration-300 transform
+        hover:scale-110 hover:shadow-xl hover:shadow-yellow-300/60
+        ${isOpen ? 'bg-white shadow-md rotate-y-180' : 'bg-gradient-to-br from-purple-500 to-indigo-600 shadow-lg'}
+        ${isMatched ? 'opacity-70 ring-2 ring-green-400' : ''}`}
+      >
+
+        {/* Tampilkan icon jika kartu terbuka atau sudah cocok */}
+        {isOpen ? (
+          <span className="animate-bounce-once">
+            <IconComponent style={{ color: card.color }} />
+          </span>
+        ) : (
+          <FaQuestion className="text-white/60 text-xl" />
+        )}
+
+      </div>
     </div>
   );
 }
