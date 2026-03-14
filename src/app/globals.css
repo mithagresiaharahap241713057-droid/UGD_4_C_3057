@@ -79,3 +79,19 @@ body {
 .animate-win-glow {
   animation: winGlow 0.8s ease-in-out infinite;
 }
+
+@keyframes textBlink {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.animate-text-blink {
+  animation: textBlink 1.2s ease-in-out infinite;
+}
