@@ -37,5 +37,5 @@ body {
 }
 
 .float-text {
-  animation: wiggleUpDown 4s ease-in-out infinite;
+  animation: wiggleUpDown 8s ease-in-out infinite;
 }
