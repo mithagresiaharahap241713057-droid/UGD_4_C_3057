@@ -6,7 +6,7 @@ import GameBoard from "../components/GameBoard";
 import ScoreBoard from "../components/ScoreBoard";
 // Import react-icons
 import { GiCardJoker } from 'react-icons/gi';
-import { FaAppleAlt, FaLemon, FaHeart, FaStar } from 'react-icons/fa';
+import { FaAppleAlt, FaLemon, FaHeart, FaStar, FaSun, FaMoon, FaLeaf, FaBolt } from 'react-icons/fa';
 
 // Daftar icon yang digunakan sebagai isi kartu (4 pasang = 8 kartu)
 const ICONS = [
@@ -14,8 +14,11 @@ const ICONS = [
   { icon: FaLemon, color: "#eab308" },
   { icon: FaHeart, color: "#ec4899" },
   { icon: FaStar, color: "#f97316" },
+  { icon: FaSun, color: "#facc15" },
+  { icon: FaMoon, color: "#6366f1" },
+  { icon: FaLeaf, color: "#22c55e" },
+  { icon: FaBolt, color: "#f59e0b" },
 ];
-
 // Fungsi untuk mengacak urutan array menggunakan algoritma Fisher-Yates
 // Menerima parameter 'array' dan mengembalikan array yang sudah diacak
 const shuffleArray = (array) => {
