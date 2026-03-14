@@ -47,9 +47,9 @@ function ScoreBoard({ moves, matchedCount, totalPairs, time, onReset }) {
 
       {/* Pesan selamat jika semua pasangan ditemukan */}
       {isGameComplete && (
-        <p className="text-yellow-300 font-bold text-lg mb-2 animate-pulse">
-          🎉 Selamat! Kamu menang dalam {moves} percobaan!
-        </p>
+        <div className="mt-4 px-6 py-3 rounded-xl bg-orange-400/30 backdrop-blur-sm text-white font-bold text-lg shadow-lg">
+          🎉 Selamat! Selesai dalam waktu {time} detik dengan {moves} percobaan.
+        </div>
       )}
 
       {/* Tombol untuk mereset permainan */}
