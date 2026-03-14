@@ -70,7 +70,11 @@ export default function Home() {
   // useEffect untuk inisialisasi kartu saat komponen pertama kali dirender
   useEffect(() => {
     setCards(createCards(getPairCount()));
-  }, [difficulty]);
+    setFlippedCards([]);
+    setMatchedCards([]);
+    setMoves(0);
+    setTime(0);
+}, [difficulty]);
 
   // Timer berjalan setiap detik
   useEffect(() => {
