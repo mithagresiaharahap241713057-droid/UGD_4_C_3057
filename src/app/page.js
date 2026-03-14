@@ -143,24 +143,36 @@ export default function Home() {
       {/* Difficulty Selector */}
       <div className="flex gap-4 mb-6">
         <button
-          onClick={() => setDifficulty("easy")}
-          className="px-4 py-2 bg-yellow-400 text-black rounded-full font-bold"
-        >
-          Easy (4)
+            onClick={() => setDifficulty("easy")}
+            className={`px-5 py-2 rounded-full font-bold transition-all duration-200
+            ${difficulty === "easy"
+            ? "bg-yellow-400 text-black shadow-lg scale-105"
+            : "bg-white/20 backdrop-blur-sm text-white hover:scale-105"}
+            `}
+          >
+            Easy (4)
         </button>
 
         <button
-          onClick={() => setDifficulty("medium")}
-          className="px-4 py-2 bg-gray-600 text-white rounded-full"
-        >
-          Medium (6)
+            onClick={() => setDifficulty("medium")}
+            className={`px-5 py-2 rounded-full font-bold transition-all duration-200
+            ${difficulty === "medium"
+            ? "bg-yellow-400 text-black shadow-lg scale-105"
+            : "bg-white/20 backdrop-blur-sm text-white hover:scale-105"}
+            `}
+          >
+            Medium (6)
         </button>
 
         <button
-          onClick={() => setDifficulty("hard")}
-          className="px-4 py-2 bg-gray-600 text-white rounded-full"
-        >
-          Hard (8)
+            onClick={() => setDifficulty("hard")}
+            className={`px-5 py-2 rounded-full font-bold transition-all duration-200
+            ${difficulty === "hard"
+            ? "bg-yellow-400 text-black shadow-lg scale-105"
+            : "bg-white/20 backdrop-blur-sm text-white hover:scale-105"}
+            `}
+          >
+            Hard (8)
         </button>
       </div>
 
