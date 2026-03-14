@@ -39,3 +39,9 @@ body {
 .float-text {
   animation: wiggleUpDown 5s ease-in-out infinite;
 }
+.perspective {
+  perspective: 1000px;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
