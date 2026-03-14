@@ -135,8 +135,9 @@ export default function Home() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 p-4">
       
       {/* Judul aplikasi */}
-      <h1 className="text-4xl font-bold mb-6 drop-shadow-lg flex items-center gap-3 float-text bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-        <GiCardJoker className="text-yellow-300 text-4xl" />
+      <h1 className="text-4xl font-extrabold mb-6 drop-shadow-lg flex items-center gap-3 float-text
+bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+  <GiCardJoker className="text-yellow-300 text-4xl" />
         Memory Card
       </h1>
 
