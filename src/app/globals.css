@@ -18,7 +18,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes floatText {
+@keyframes wiggleUpDown {
   0% {
     transform: scale(0.8);
   }
@@ -31,5 +31,5 @@ body {
 }
 
 .float-text {
-  animation: floatText 2s ease-in-out infinite;
+  animation: wiggleUpDown 1.5s ease-in-out infinite;
 }
