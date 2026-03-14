@@ -30,6 +30,6 @@ body {
   }
 }
 
-.animate-bounce-once{
-  animation: bounce-once 0.3s ease-out;
+.float-text {
+  animation: floatText 2s ease-in-out infinite;
 }
