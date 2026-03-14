@@ -78,12 +78,14 @@ export default function Home() {
 
   // Timer berjalan setiap detik
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTime(prev => prev + 1);
-    }, 1000);
+    if (matchedCards.length === getPairCount() * 2) return;
 
-    return () => clearInterval(timer);
-  }, []);
+  const timer = setInterval(() => {
+    setTime(prev => prev + 1);
+  }, 1000);
+
+  return () => clearInterval(timer);
+}, [matchedCards]);
 
   // useEffect untuk mengecek kecocokan setiap kali 2 kartu terbuka
   useEffect(() => {
