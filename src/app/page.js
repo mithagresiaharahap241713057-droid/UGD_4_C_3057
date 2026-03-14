@@ -132,7 +132,7 @@ export default function Home() {
 
   return (
     // Container utama dengan background gradient dan tinggi minimal sesuai viewport
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 p-4">
+    <div className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 p-4 overflow-hidden">
       
       {/* Judul aplikasi */}
       <h1 className="text-4xl font-extrabold mb-6 drop-shadow-lg flex items-center gap-3 float-text
