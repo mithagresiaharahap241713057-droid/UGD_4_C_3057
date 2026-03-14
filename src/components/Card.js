@@ -37,7 +37,7 @@ function Card({ card, isFlipped, isMatched, isGameComplete, onFlip }) {
           transition-all duration-300 transform
           hover:scale-110 hover:shadow-xl hover:shadow-purple-400/70
           bg-white shadow-md
-          ${isMatched ? 'opacity-90 ring-2 ring-green-400 shadow-lg shadow-green-400/70' : ''}
+          ${isMatched ? 'opacity-60 shadow-md shadow-green-400/40' : ''}
           ${isGameComplete ? 'animate-win-glow' : ''}`}
         >
           {isOpen && (
