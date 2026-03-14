@@ -47,10 +47,13 @@ function ScoreBoard({ moves, matchedCount, totalPairs, time, onReset }) {
 
       {/* Pesan selamat jika semua pasangan ditemukan */}
       {isGameComplete && (
-        <div className="mt-4 px-6 py-3 rounded-xl bg-orange-400/30 backdrop-blur-sm text-white font-bold text-lg shadow-lg animate-win-glow">
-          🎉 Selamat! Selesai dalam waktu {time} detik dengan {moves} percobaan.
-        </div>
-      )}
+  <div className="mt-4 px-6 py-3 rounded-xl bg-orange-400/30 backdrop-blur-sm text-white font-bold text-lg shadow-lg">
+    <span className="animate-text-blink">
+      🎉 Selamat!
+    </span>{" "}
+    Selesai dalam waktu {time} detik dengan {moves} percobaan.
+  </div>
+)}
 
       {/* Tombol untuk mereset permainan */}
       <button
