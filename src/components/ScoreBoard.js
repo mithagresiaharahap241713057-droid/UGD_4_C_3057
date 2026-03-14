@@ -55,7 +55,7 @@ function ScoreBoard({ moves, matchedCount, totalPairs, time, onReset }) {
       {/* Tombol untuk mereset permainan */}
       <button
         onClick={onReset}
-        className="px-6 py-2 bg-yellow-400 text-indigo-900 font-bold rounded-full hover:bg-yellow-300 transition-colors duration-200 shadow-lg flex items-center gap-2 mx-auto"
+        className="px-6 py-2 bg-yellow-400 text-indigo-900 font-bold rounded-full transition-all duration-300 shadow-lg flex items-center gap-2 mx-auto hover:bg-yellow-300 hover:shadow-yellow-300/70 hover:shadow-xl hover:scale-110"
       >
         {isGameComplete ? <FaRedo /> : <FaSyncAlt />}
         {isGameComplete ? "Main Lagi" : "Acak Ulang"}
