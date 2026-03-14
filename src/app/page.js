@@ -29,8 +29,9 @@ const shuffleArray = (array) => {
 
 // Fungsi untuk membuat set kartu baru
 // Menggandakan setiap icon (untuk membuat pasangan), lalu mengacak urutannya
-const createCards = () => {
-  const paired = ICONS.flatMap((item, index) => [
+const createCards = (pairCount) => {
+  const selectedIcons = ICONS.slice(0, pairCount);
+  const paired = selectedIcons.flatMap((item, index) => [
     { id: index * 2, icon: item.icon, color: item.color, pairId: index },
     { id: index * 2 + 1, icon: item.icon, color: item.color, pairId: index },
   ]);
@@ -50,9 +51,31 @@ export default function Home() {
   // State 'moves' menyimpan jumlah percobaan yang dilakukan pemain
   const [moves, setMoves] = useState(0);
 
+  // State difficulty
+  const [difficulty, setDifficulty] = useState("easy");
+
+  // State timer
+  const [time, setTime] = useState(0);
+
+  // Menentukan jumlah pasangan berdasarkan difficulty
+  const getPairCount = () => {
+    if (difficulty === "easy") return 4;
+    if (difficulty === "medium") return 6;
+    return 8;
+  };
+
   // useEffect untuk inisialisasi kartu saat komponen pertama kali dirender
   useEffect(() => {
-    setCards(createCards());
+    setCards(createCards(getPairCount()));
+  }, [difficulty]);
+
+  // Timer berjalan setiap detik
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(prev => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(timer);
   }, []);
 
   // useEffect untuk mengecek kecocokan setiap kali 2 kartu terbuka
@@ -93,26 +116,53 @@ export default function Home() {
 
   // Fungsi untuk mereset permainan ke kondisi awal
   const resetGame = () => {
-    setCards(createCards());
+    setCards(createCards(getPairCount()));
     setFlippedCards([]);
     setMatchedCards([]);
     setMoves(0);
+    setTime(0);
   };
 
   return (
     // Container utama dengan background gradient dan tinggi minimal sesuai viewport
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 p-4">
+      
       {/* Judul aplikasi */}
       <h1 className="text-4xl font-bold mb-6 text-white drop-shadow-lg flex items-center gap-3">
         <GiCardJoker className="text-yellow-300 text-4xl" />
         Memory Card
       </h1>
 
+      {/* Difficulty Selector */}
+      <div className="flex gap-4 mb-6">
+        <button
+          onClick={() => setDifficulty("easy")}
+          className="px-4 py-2 bg-yellow-400 text-black rounded-full font-bold"
+        >
+          Easy (4)
+        </button>
+
+        <button
+          onClick={() => setDifficulty("medium")}
+          className="px-4 py-2 bg-gray-600 text-white rounded-full"
+        >
+          Medium (6)
+        </button>
+
+        <button
+          onClick={() => setDifficulty("hard")}
+          className="px-4 py-2 bg-gray-600 text-white rounded-full"
+        >
+          Hard (8)
+        </button>
+      </div>
+
       {/* Komponen ScoreBoard untuk menampilkan skor */}
       <ScoreBoard
         moves={moves}
+        time={time}
         matchedCount={matchedCards.length / 2}
-        totalPairs={ICONS.length}
+        totalPairs={getPairCount()}
         onReset={resetGame}
       />
 
