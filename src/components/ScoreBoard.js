@@ -47,7 +47,7 @@ function ScoreBoard({ moves, matchedCount, totalPairs, time, onReset }) {
 
       {/* Pesan selamat jika semua pasangan ditemukan */}
       {isGameComplete && (
-  <div className="mt-6 px-6 py-3 rounded-xl bg-orange-400/30 backdrop-blur-sm text-white font-bold text-lg shadow-lg">
+  <div className="mt-4 px-6 py-3 rounded-xl bg-gradient-to-r from-orange-400/30 via-pink-400/30 to-purple-500/30 backdrop-blur-md border border-white/20 shadow-lg shadow-purple-500/30 animate-pulse">
     <span className="animate-text-blink">
       🎉 Selamat! Selesai dalam waktu {time} detik dengan {moves} percobaan.
     </span>{" "}
