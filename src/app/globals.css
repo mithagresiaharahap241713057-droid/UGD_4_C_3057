@@ -95,3 +95,13 @@ body {
 .animate-text-blink {
   animation: textBlink 1.2s ease-in-out infinite;
 }
+@keyframes pop {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
