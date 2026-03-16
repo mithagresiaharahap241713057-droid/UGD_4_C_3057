@@ -189,7 +189,7 @@ bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-400 bg-clip-text text-tr
       />
 
       {/* Komponen GameBoard untuk menampilkan grid kartu */}
-      <div className="bg-white/10 backdrop-blur-sm p-4 rounded-2xl shadow-2xl w-fit">
+      <div className="bg-white/10 backdrop-blur-sm p-3 rounded-2xl shadow-2xl inline-block">
         <GameBoard
           cards={cards}
           flippedCards={flippedCards}
