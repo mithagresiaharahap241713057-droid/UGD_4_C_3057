@@ -143,7 +143,7 @@ export default function Home() {
     <div className="absolute bottom-[-150px] right-[-150px] w-[500px] h-[500px] bg-blue-500/20 blur-3xl rounded-full"></div>
 
     {/* Konten utama */}
-    <div className="relative z-10"> 
+    <div className="relative z-10 flex flex-col items-center justify-center">
       
       {/* Judul aplikasi */}
       <h1 className="text-4xl font-extrabold mb-6 drop-shadow-lg flex items-center gap-3 float-text
