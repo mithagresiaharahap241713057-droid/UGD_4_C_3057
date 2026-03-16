@@ -24,9 +24,9 @@ function Card({ card, isFlipped, isMatched, isGameComplete, onFlip }) {
       >
 
         <div
-          className={`backface-hidden absolute w-full h-full flex items-center justify-center text-3xl rounded-xl select-none
+        className={`backface-hidden absolute w-full h-full flex items-center justify-center text-3xl rounded-xl select-none
           transition-all duration-300 transform
-          hover:scale-110 hover:shadow-xl hover:shadow-purple-400/70
+          hover:scale-110 hover:rotate-1 hover:shadow-xl hover:shadow-purple-400/70
           bg-gradient-to-br from-blue-600 to-purple-700 shadow-lg`}
         >
           <FaQuestion className="text-white/70 text-xl" />
