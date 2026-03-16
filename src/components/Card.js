@@ -15,8 +15,8 @@ function Card({ card, isFlipped, isMatched, isGameComplete, onFlip }) {
   return (
     <div
       onClick={handleClick}
-      className="w-20 h-20 cursor-pointer transition-all duration-300 perspective"
-    >
+      className="w-20 h-20 cursor-pointer transition-all duration-300 perspective animate-[pop_0.4s_ease]"
+      >
 
       <div
         className={`relative w-full h-full transform-style transition-transform duration-500
