@@ -132,9 +132,18 @@ export default function Home() {
     setTime(0);
   };
 
-  return (
-    // Container utama dengan background gradient dan tinggi minimal sesuai viewport
-    <div className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 p-4 overflow-hidden">
+ return (
+  // Container utama dengan background gradient dan tinggi minimal sesuai viewport
+        <div className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 p-4 overflow-hidden">
+
+    {/* Glow kiri atas */}
+    <div className="absolute top-[-150px] left-[-150px] w-[500px] h-[500px] bg-purple-500/20 blur-3xl rounded-full"></div>
+
+    {/* Glow kanan bawah */}
+    <div className="absolute bottom-[-150px] right-[-150px] w-[500px] h-[500px] bg-blue-500/20 blur-3xl rounded-full"></div>
+
+    {/* Konten utama */}
+    <div className="relative z-10"> 
       
       {/* Judul aplikasi */}
       <h1 className="text-4xl font-extrabold mb-6 drop-shadow-lg flex items-center gap-3 float-text
@@ -198,5 +207,7 @@ bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-400 bg-clip-text text-tr
         />
       </div>
     </div>
-  );
+</div>
+  
+);
 }
